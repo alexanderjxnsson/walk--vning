@@ -21,6 +21,7 @@
 #include <iostream>
 #include <random>
 #include <string>
+/* Declarations */
 char currentToRender[10][10];
 int NUMBEROFTRAPS = 3;
 int NUMBEROFBANDITS = 2;
@@ -29,7 +30,6 @@ int xPos;
 int yPos;
 int maxTurnos = INT_MAX;
 bool squareDrawn = false;
-
 struct Location
 {
     int xPosition;                  // Represents a place in the board.
@@ -56,7 +56,6 @@ struct Treasure
     Location position;            // Represents the treasure.
     char symbol = 'X';            // The game ends as soon Player.position == Treasure.position
 };
-
 struct World
 {
     struct Bandit 
@@ -92,8 +91,6 @@ struct World
     int xDimension;               // Represents the board.
     int yDimension;
 } board = {.xDimension = 10, .yDimension = 10};
-
-// Possible directions. WRONG_DIRECTION is used to report incorrect input
 enum Direction { RIGHT, LEFT, TOP, BOTTOM, WRONG_DIRECTION };
 enum Result { VICTORY, DEFEAT };
 void drawBoard(Player, Trap[], Bandit[], Treasure);
