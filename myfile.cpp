@@ -277,7 +277,7 @@ void moveCharacter(char cCharacter, World::Player &player, World::Bandit &bandit
      }
 }
 
-void endGame(/* in */ Result result)
+void endGame(Result result)
 {
   std::string announcement = (result == VICTORY) ? "YOU WIN" : "GAME OVER";
   system("cls");
