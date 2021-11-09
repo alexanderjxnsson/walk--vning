@@ -99,7 +99,6 @@ void endGame(Result);
 void movePlayer(Player &, Direction);
 void moveBandit(Bandit &);
 Direction askDirection();
-
 int main()
 {
     Player player = {.position = {.xPosition = xPos, .yPosition = yPos}};
