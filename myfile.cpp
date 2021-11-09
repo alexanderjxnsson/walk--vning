@@ -99,8 +99,11 @@ void endGame(Result);
 void movePlayer(Player &, Direction);
 void moveBandit(Bandit &);
 Direction askDirection();
+/* Delarations end */
 int main()
 {
+    /* Init start */
+    std::srand(std::time(0));
     Player player = {.position = {.xPosition = xPos, .yPosition = yPos}};
     Bandit banditsInMap[NUMBEROFBANDITS];
     Trap trapsInMap[NUMBEROFTRAPS];
@@ -141,11 +144,13 @@ int main()
     		    }
         }
     } while (match);
+    /* Init end */
     // The order of the turn is the following:
     // 1. Board is drawn.
     // 2. User is asked for movement direction.
     // 3. Player moves in the chosen direction.
     // 4. Bandits move.
+    /* Loop start */
     for (int i = 0; i <= maxTurnos; i++)
     {
         drawBoard2(player, trapsInMap, banditsInMap, treasure);
@@ -164,7 +169,9 @@ int main()
         }
         system("cls");;
     }
+    /* Loop end */
 }
+/* Loop start */
 Direction askDirection()
 {
 
@@ -449,3 +456,4 @@ void endGame(/* in */ Result result)
   std::cout << "===========================" << std::endl;
   exit(1);
 }
+/* Functions end */
